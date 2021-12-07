@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -30,4 +31,202 @@
 
 .bottom-bar {
     justify-content: flex-start;
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas {
+    position: relative;
+}
+
+.top-bar, .bottom-bar {
+    width: 1200px;
+    height: 60px;
+    padding: 0 10px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    display: flex;
+    align-items: center;
+    border: solid 2px black;
+    position: relative;
+}
+
+.top-bar {
+    justify-content: space-between;
+}
+
+.bottom-bar {
+    justify-content: flex-start;
+}
+
+.HP {
+    width: 400px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: green;
+    z-index: 1;
+    transition: width 300ms;
+}
+
+.HP-back {
+    content: '';
+    display: block;
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    z-index: 0;
+}
+
+.tutorial-screen {
+    width: 1200px;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.keyboard-shortcuts {
+    --size: 60px;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: calc(3*var(--size));
+    max-height: calc(2*var(--size));
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mouse-steering {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 160px;
+    width: 80px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 70px 70px 90px 90px;
+}
+
+.mouse-steering::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 40px;
+    background-color: black;
+    border-radius: 6px;
+}
+
+.mouse-steering::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 50%;
+    background-color: black;
+    border-radius: 6px;
+}
+
+.mouse-steering .description {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    font-size: 24px;
+    width: max-content;
+    color: white;
+}
+
+.mouse-steering .description::before {
+    position: absolute;
+    content: 'ATTACK WITH LEFT BUTTON';
+    bottom: 240px;
+    right: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    font-size: 24px;
+    width: max-content;
+    color: white;
+}
+
+.keyboard-shortcuts .key {
+    width: var(--size);
+    height: var(--size);
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bolder;
+    position: relative;
+}
+
+.keyboard-shortcuts .key::after {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    color: white;
+}
+
+.keyboard-shortcuts .key:nth-of-type(1) {
+    margin-left: var(--size);
+}
+
+.keyboard-shortcuts .key:nth-of-type(1)::after {
+    content: 'UP';
+    top: -100%;
+}
+
+.keyboard-shortcuts .key:nth-of-type(2)::after {
+    content: 'SHOT';
+    right: -200%;
+}
+
+.keyboard-shortcuts .key:nth-of-type(3)::after {
+    content: 'LEFT';
+    left: -200%;
+}
+
+.keyboard-shortcuts .key:nth-of-type(4)::after {
+    content: 'DOWN';
+    bottom: -100%;
+}
+
+.keyboard-shortcuts .key:nth-of-type(5)::after {
+    content: 'RIGHT';
+    right: -200%;
+>>>>>>> 08cc0c1 (tutorial added)
 }
