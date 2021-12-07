@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-bar, .bottom-bar {
+    width: 1200px;
+    height: 60px;
+    padding: 0 10px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    display: flex;
+    align-items: center;
+    border: solid 2px black;
+}
+
+.top-bar {
+    justify-content: flex-end;
+}
+
+.bottom-bar {
+    justify-content: flex-start;
+}
